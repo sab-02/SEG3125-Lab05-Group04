@@ -314,6 +314,9 @@
                 <i class="bi bi-calendar-event me-2"></i>Date
               </label>
               <input type="date" class="form-control form-control-lg" id="dateInput" required>
+              <div class="invalid-feedback">
+                  We are closed on weekends. Please choose a weekday.
+              </div>
             </div>
 
             <div class="col-md-6">
@@ -336,13 +339,66 @@
               <i class="bi bi-person me-2"></i>Full Name
             </label>
             <input type="text" class="form-control form-control-lg" id="nameInput" required>
+            <div class="invalid-feedback">
+              Please enter a valid name (letters, spaces, hyphens only). 
+            </div>
           </div>
 
+          <!-- Email -->
           <div class="mb-4">
             <label class="form-label fw-semibold">
               <i class="bi bi-envelope me-2"></i>Email
             </label>
             <input type="email" class="form-control form-control-lg" id="emailInput" required>
+            <div class="invalid-feedback">
+                Please enter email as example@email.com.
+            </div>
+
+          </div>
+
+          <!-- Phone -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold">
+              <i class="bi bi-telephone me-2"></i>Phone Number
+            </label>
+            <input type="text" class="form-control form-control-lg" id="phoneInput" placeholder="123-456-7890" required>
+            <small class="text-muted">Used only for appointment reminders.</small>
+            <div class="invalid-feedback">
+                Please enter phone as 123-456-7890.
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <h5 class="fw-bold mb-3"><i class="bi bi-credit-card me-2"></i>Payment Information</h5>
+
+          <!-- Card Number -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Card Number</label>
+            <input type="text" class="form-control form-control-lg" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+             <div class="invalid-feedback">
+                Card must be 16 digits formatted like 1234 5678 9012 3456.
+             </div>
+          </div>
+
+          <div class="row mb-4">
+            <!-- Expiry -->
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="form-label fw-semibold">Expiry (MM/YY)</label>
+              <input type="text" class="form-control form-control-lg" id="cardExpiry" placeholder="MM/YY" required>
+              <div class="invalid-feedback">
+                Expiry must be in MM/YY format.
+              </div>
+            </div>
+
+            <!-- CVV -->
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">CVV</label>
+              <input type="text" class="form-control form-control-lg" id="cardCVV" placeholder="123" required>
+              <div class="invalid-feedback">
+                CVV must be 3 digits.
+              </div>
+            </div>
           </div>
 
         </form>
