@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luxe Hair Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg brown-navbar shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Luxe Hair Studio</a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experts">Our Experts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#booking">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO SECTION -->
+<section class="hero d-flex align-items-center text-center text-lg-start">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold">The confidence that changes your <span class="accent">look</span>.</h1>
+        <p class="mt-3">Professional hair styling tailored to your personality.</p>
+        <a href="#booking" class="btn btn-dark mt-3">Book Your Appointment</a>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-4 shadow" alt="Hair styling">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <div class="row g-4">
+
+      <!-- Haircut -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e" class="card-img-top rounded-top" alt="Haircut">
+          <div class="card-body text-center">
+            <h5 class="card-title">Haircut</h5>
+            <p>$40 - 30 minutes</p>
+            <a href="#booking" class="select-service-link">
+            <button class="btn btn-outline-dark w-100 select-service"
+              data-service="Haircut - $40">Select</button>
+            </a>  
+          </div>
+        </div>
+      </div>
+
+      <!-- Coloring -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e" class="card-img-top rounded-top" alt="Hair Coloring">
+          <div class="card-body text-center">
+            <h5 class="card-title">Hair Coloring</h5>
+            <p>$80 - 60 minutes</p>
+            <a href="#booking" class="select-service-link">
+            <button class="btn btn-outline-dark w-100 select-service"
+              data-service="Hair Coloring - $80">Select</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Styling -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f" class="card-img-top rounded-top" alt="Styling">
+          <div class="card-body text-center">
+            <h5 class="card-title">Styling</h5>
+            <p>$50 - 45 minutes</p>
+            <a href="#booking" class="select-service-link">
+            <button class="btn btn-outline-dark w-100 select-service"
+              data-service="Styling - $50">Select</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Waxing -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 shadow-sm">
+          <img src="https://plus.unsplash.com/premium_photo-1664187387039-ba5451b2be6f?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-top" alt="Styling">
+          <div class="card-body text-center">
+            <h5 class="card-title">Waxing</h5>
+            <p>$25 - 30 minutes</p>
+            <a href="#booking" class="select-service-link">
+            <button class="btn btn-outline-dark w-100 select-service"
+              data-service="Waxing - $20">Select</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hair Wash -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 shadow-sm">
+          <img src="https://plus.unsplash.com/premium_photo-1661545890390-dc755db9ef7e?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-top" alt="Styling">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Hair Wash</h5>
+            <p>$40 - 45 minutes</p>
+            <a href="#booking" class="select-service-link">
+            <button class="btn btn-outline-dark w-100 select-service"
+              data-service="Hair Wash - $40">Select</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beard Shaping -->
+      <div class="col-md-4">
+        <div class="card service-card h-100 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1654097803253-d481b6751f29?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top rounded-top" alt="Styling">
+          <div class="card-body text-center">
+            <h5 class="card-title">Beard Shaping</h5>
+            <p>$20 - 30 minutes</p>
+            <a href="#booking" class="select-service-link">
+            <button class="btn btn-outline-dark w-100 select-service"
+              data-service="Beard Shaping - $20">Select</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTS -->
+<section id="experts" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Meet Our Experts</h2>
+
+    <div id="expertsCarousel" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row text-center">
+
+            <div class="col-md-4">
+              <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39"
+                   class="rounded-circle mb-3 shadow"
+                   width="150">
+              <h5>John Clark</h5>
+              <p class="text-muted">Senior Stylist</p>
+            </div>
+
+            <div class="col-md-4">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+                   class="rounded-circle mb-3 shadow"
+                   width="150">
+              <h5>Sophia Lee</h5>
+              <p class="text-muted">Color Specialist</p>
+            </div>
+
+            <div class="col-md-4">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1"
+                   class="rounded-circle mb-3 shadow"
+                   width="150">
+              <h5>Emma Rodriguez</h5>
+              <p class="text-muted">Creative Stylist</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row text-center">
+
+            <div class="col-md-4">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"
+                   class="rounded-circle mb-3 shadow"
+                   width="150">
+              <h5>Michael Brown</h5>
+              <p class="text-muted">Beard Specialist</p>
+            </div>
+
+            <div class="col-md-4">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+                   class="rounded-circle mb-3 shadow"
+                   width="150">
+              <h5>Olivia Chen</h5>
+              <p class="text-muted">Hair Treatment Expert</p>
+            </div>
+
+            <div class="col-md-4">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
+                   class="rounded-circle mb-3 shadow"
+                   width="150">
+              <h5>Daniel Smith</h5>
+              <p class="text-muted">Junior Stylist</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev"
+              type="button"
+              data-bs-target="#expertsCarousel"
+              data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next"
+              type="button"
+              data-bs-target="#expertsCarousel"
+              data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING SECTION -->
+<section id="booking" class="py-5 booking-section">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Book Your Appointment</h2>
+      <p class="text-muted">Select your service and reserve your perfect time.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- FORM COLUMN -->
+      <div class="col-lg-7">
+        <form id="bookingForm" class="booking-card p-4 p-lg-5">
+
+          <!-- Service -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold">
+              <i class="bi bi-scissors me-2"></i>Select Service
+            </label>
+            <select class="form-select form-select-lg" id="serviceSelect" required>
+              <option value="">Choose...</option>
+              <option>Haircut - $40</option>
+              <option>Hair Coloring - $80</option>
+              <option>Styling - $50</option>
+              <option>Waxing - $20</option>
+              <option>Hair Wash - $40</option>
+              <option>Beard Shaping - $20</option> 
+            </select>
+          </div>
+
+          <!-- Stylist -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold">
+              <i class="bi bi-person-badge me-2"></i>Choose Your Stylist
+            </label>
+            <select class="form-select form-select-lg" id="stylistSelect" required>
+              <option value="">Choose...</option>
+              <option>John Clark – Senior Stylist</option>
+              <option>Sophia Lee – Color Specialist</option>
+              <option>Emma Rodriguez – Creative Stylist</option>
+              <option>Michael Brown – Beard Specialist</option>
+              <option>Olivia Chen – Hair Treatment Expert</option>
+              <option>Daniel Smith – Junior Stylist</option>
+            </select>
+          </div>
+
+
+          <!-- Date + Time -->
+          <div class="row mb-4">
+            <div class="col-md-6 mb-3 mb-md-0">
+              <label class="form-label fw-semibold">
+                <i class="bi bi-calendar-event me-2"></i>Date
+              </label>
+              <input type="date" class="form-control form-control-lg" id="dateInput" required>
+            </div>
+
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">
+                <i class="bi bi-clock me-2"></i>Time
+              </label>
+              <select class="form-select form-select-lg" id="timeSelect" required>
+                <option value="">Choose...</option>
+                <option>10:00</option>
+                <option>12:00</option>
+                <option>14:00</option>
+                <option>16:00</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Personal Info -->
+          <div class="mb-4">
+            <label class="form-label fw-semibold">
+              <i class="bi bi-person me-2"></i>Full Name
+            </label>
+            <input type="text" class="form-control form-control-lg" id="nameInput" required>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-semibold">
+              <i class="bi bi-envelope me-2"></i>Email
+            </label>
+            <input type="email" class="form-control form-control-lg" id="emailInput" required>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- SUMMARY COLUMN -->
+      <div class="col-lg-5">
+        <div class="summary-card p-4 p-lg-5 h-100">
+
+          <h5 class="fw-bold mb-4">Your Appointment</h5>
+
+          <div id="bookingSummary" class="summary-content mb-4">
+            <p class="text-muted">No selection yet.</p>
+          </div>
+
+          <!-- Confirm Button -->
+          <button id="confirmBtn"
+                  class="btn btn-primary btn-lg w-100 booking-btn"
+                  disabled>
+            Confirm Booking
+          </button>
+
+          <!-- Confirmation Message -->
+          <div id="confirmationMessage" class="confirmation-card d-none mt-4"></div>
+
+          <hr class="my-4">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="mb-4">Contact Us</h2>
+
+    <p><i class="bi bi-geo-alt me-2"></i>123 Beauty Street, Ottawa</p>
+    <p><i class="bi bi-clock me-2"></i>Mon - Sat: 9AM - 6PM</p>
+    <p><i class="bi bi-telephone me-2"></i>(123) 456-7890</p>
+    <p><i class="bi bi-envelope me-2"></i>info@luxehair.com</p>
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-2 fw-semibold">Luxe Hair Studio</p>
+    <small>© 2026 All Rights Reserved</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

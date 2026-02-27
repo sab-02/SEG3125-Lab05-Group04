@@ -1,0 +1,187 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#services,
+#experts,
+#booking,
+#contact {
+  scroll-margin-top: 90px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 70px;
+}
+
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(to bottom, #fff, #f8f5f2);
+}
+
+.accent {
+  color: #8b5e3c;
+}
+
+.service-card {
+  transition: 0.3s ease;
+  border-radius: 10px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card.selected {
+  border: 2px solid #8b5e3c;
+}
+
+.btn-dark {
+  background-color: #8b5e3c;
+  border: none;
+}
+
+.btn-dark:hover {
+  background-color: #6f472d;
+}
+
+footer {
+  font-size: 14px;
+}
+
+/* Booking Section Background */
+.booking-section {
+  background: linear-gradient(to bottom, #f8f5f2, #ffffff);
+}
+
+/* Booking Card */
+.booking-card {
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Summary Card */
+.summary-card {
+  background: #fdfaf7;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* Summary Content */
+.summary-content {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Form Inputs */
+.form-control,
+.form-select {
+  border-radius: 12px;
+  padding: 12px;
+}
+
+/* Confirm Button */
+.booking-btn {
+  background: linear-gradient(135deg, #8b5e3c, #b07d57);
+  border: none;
+  border-radius: 50px;
+  padding: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.booking-btn:hover {
+  background: linear-gradient(135deg, #6f472d, #9c6c48);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 94, 60, 0.3);
+}
+
+.booking-btn:disabled {
+  background: #d8cfc8;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Confirmation Card */
+.confirmation-card {
+  background: #fdf8f4;
+  border-radius: 20px;
+  padding: 25px;
+  border-left: 5px solid #8b5e3c;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Reference Badge */
+.reference-badge {
+  display: inline-block;
+  background-color: #8b5e3c;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* Success Icon */
+.success-icon {
+  font-size: 40px;
+  color: #8b5e3c;
+  margin-bottom: 15px;
+}
+
+
+/* Remove Bootstrap green validation visuals */
+.form-control.is-valid {
+  border-color: #ced4da !important;
+  background-image: none !important;
+}
+
+/* Custom error styling */
+.form-control.is-invalid {
+  border-color: #b07d57;
+  box-shadow: 0 0 0 0.15rem rgba(176, 125, 87, 0.15);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #8b5e3c;
+  border-radius: 50%;
+  padding: 20px;
+}
+/* Desktop spacing */
+.carousel-control-prev {
+  left: -40px;
+}
+
+.carousel-control-next {
+  right: -40px;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+}
+ /* Keep Images the same height */
+.service-card img {
+  height: 240px;
+  object-fit: cover;
+}
+
+.brown-navbar {
+  background-color: #8b5e3c !important; /* baby pink */
+}
+/* Hover effect for menu items */
+.brown-navbar .nav-link:hover {
+  color: white; /* baby pink text on hover */
+}
