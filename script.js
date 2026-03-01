@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // Activate Bootstrap tooltips
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => 
+    new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+
+  const calendarIcon = document.getElementById("calendarIcon");
+
+  calendarIcon.addEventListener("click", function () {
+    fp.open();
+  });
   const serviceSelect = document.getElementById("serviceSelect");
   const dateInput = document.getElementById("dateInput");
   const timeSelect = document.getElementById("timeSelect");
@@ -9,6 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const confirmBtn = document.getElementById("confirmBtn");
   const bookingSummary = document.getElementById("bookingSummary");
   const confirmationMessage = document.getElementById("confirmationMessage");
+
+
+  const fp = flatpickr(dateInput, {
+    minDate: "today",
+    disable: [
+      function(date) {
+        return (date.getDay() === 0 || date.getDay() === 6);
+      }
+    ],
+    onChange: function(selectedDates, dateStr) {
+      updateSummary();
+      checkFormValidity();
+    }
+  });
 
   // Prevent Past Dates 
   const today = new Date().toISOString().split("T")[0];
@@ -58,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function isValidName(name) {
   const regex = /^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/;
   return regex.test(name.trim());
-}
+  }
   // Email Validation Function
   function isValidEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -99,29 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     return selectedDateTime > now;
   }
-
- 
-// Prevent Weekend Selection
-
-dateInput.addEventListener("change", function () {
-
-  dateInput.classList.remove("is-invalid");
-
-  if (!dateInput.value) return;
-
-  const selectedDate = new Date(dateInput.value + "T00:00:00");
-  const day = selectedDate.getDay();
-
-  const isWeekend = (day === 0 || day === 6);
-
-  if (isWeekend) {
-    dateInput.classList.add("is-invalid");
-    dateInput.value = "";
-  }
-
-  updateSummary();
-  checkFormValidity();
-});
 
   // Update Summary
   function updateSummary() {
@@ -235,6 +237,27 @@ dateInput.addEventListener("change", function () {
     confirmationMessage.scrollIntoView({ behavior: "smooth" });
   });
 
+  // Ensure that service chosen is filled out on the form
+  const serviceButtons = document.querySelectorAll(".select-service");
+
+  serviceButtons.forEach(button => {
+    button.addEventListener("click", function () {
+
+      const selectedService = this.getAttribute("data-service");
+
+      serviceSelect.value = selectedService;
+
+      document.querySelectorAll(".service-card").forEach(card => {
+        card.classList.remove("selected");
+      });
+
+      this.closest(".service-card").classList.add("selected");
+
+      updateSummary();
+      checkFormValidity();
+    });
+  });
+
   // Listeners 
   serviceSelect.addEventListener("change", updateSummary);
   dateInput.addEventListener("change", updateSummary);
@@ -249,26 +272,3 @@ dateInput.addEventListener("change", function () {
 
 });
 
-//Ensure that service chosen is filled out on the form
-const serviceButtons = document.querySelectorAll(".select-service");
-
-serviceButtons.forEach(button => {
-  button.addEventListener("click", function () {
-
-    // Get service from button
-    const selectedService = this.getAttribute("data-service");
-
-    // Set dropdown value
-    serviceSelect.value = selectedService;
-
-    // Highlight selected card
-    document.querySelectorAll(".service-card").forEach(card => {
-      card.classList.remove("selected");
-    });
-
-    this.closest(".service-card").classList.add("selected");
-
-    // Update summary
-    updateSummary();
-  });
-});

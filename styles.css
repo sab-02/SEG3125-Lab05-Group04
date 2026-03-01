@@ -186,4 +186,37 @@ footer {
   color: white; /* baby pink text on hover */
 }
 
+/* Reactive input effect */
+.form-control,
+.form-select {
+  transition: all 0.3s ease;
+}
 
+/* Hover effect */
+.form-control:hover,
+.form-select:hover {
+  border-color: #8b5e3c;
+  transform: scale(1.02);
+}
+
+/* Focus effect */
+.form-control:focus,
+.form-select:focus {
+  border-color: #8b5e3c !important;
+  box-shadow: 0 0 0 0.2rem rgba(139, 94, 60, 0.2);
+  transform: scale(1.03);
+}
+
+/* Disabled weekend visual feedback */
+input[type="date"]:invalid {
+  border-color: #b07d57;
+}
+
+/* Fix input group border look */
+.input-group-text {
+  border-radius: 12px 0 0 12px;
+}
+
+.input-group .form-control {
+  border-radius: 0 12px 12px 0;
+}
