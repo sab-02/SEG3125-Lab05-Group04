@@ -309,34 +309,51 @@
 
 
           <!-- Date + Time -->
-          <div class="row mb-4">
-            <div class="input-group input-group-lg">
-              <span class="input-group-text bg-white border-end-0"
-                    id="calendarIcon"
-                    style="cursor:pointer;">
-                <i class="bi bi-calendar-event"></i>
-              </span>
-              <input type="text"
-                    class="form-control border-start-0"
-                    id="dateInput"
-                    placeholder="Select a date"
-                    required>
+          <div class="row mb-4 g-3">
+
+            <!-- Date -->
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">
+                <i class="bi bi-calendar-event me-2"></i>Date
+              </label>
+
+              <div class="input-group input-group-lg">
+                <span class="input-group-text bg-white" 
+                      id="calendarIcon"
+                      style="cursor:pointer;">
+                  <i class="bi bi-calendar-event"></i>
+                </span>
+
+                <input type="text"
+                      class="form-control"
+                      id="dateInput"
+                      placeholder="Select a date"
+                      required>
+              </div>
+
+              <div class="invalid-feedback" id="dateError" style="display:none;">
+                We are closed on weekends. Please select a weekday.
+              </div>
             </div>
 
+            <!-- Time -->
             <div class="col-md-6">
               <label class="form-label fw-semibold">
                 <i class="bi bi-clock me-2"></i>Time
               </label>
-              <select class="form-select form-select-lg" id="timeSelect" required>
+              <select class="form-select form-select-lg"
+                      id="timeSelect"
+                      required>
                 <option value="">Choose...</option>
-                <option>10:00</option>
-                <option>12:00</option>
-                <option>14:00</option>
-                <option>16:00</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="16:00">4:00 PM</option>
               </select>
             </div>
-          </div>
 
+          </div>
+          
           <!-- Personal Info -->
           <div class="mb-4">
             <label class="form-label fw-semibold">
