@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Stylist Diffrent Availability 
   const stylistAvailability = {
-    "John Clark – Senior Stylist": [1, 2, 3, 4, 5],
-    "Sophia Lee – Color Specialist": [2, 3, 4, 5],
-    "Emma Rodriguez – Creative Stylist": [1, 3, 5],
-    "Michael Brown – Beard Specialist": [3, 4, 5, 6],
-    "Olivia Chen – Hair Treatment Expert": [1, 2, 3, 4],
-    "Daniel Smith – Junior Stylist": [1, 2, 3]
+    "John Clark (Senior Stylist)": [1, 2, 3, 4, 5],
+    "Sophia Lee (Color Specialist)": [2, 3, 4, 5],
+    "Emma Rodriguez (Creative Stylist)": [1, 3, 5],
+    "Michael Brown (Beard Specialist)": [3, 4, 5, 6],
+    "Olivia Chen (Hair Treatment Expert)": [1, 2, 3, 4],
+    "Daniel Smith (Junior Stylist)": [1, 2, 3]
   };
 
   function getDisabledDays() {
