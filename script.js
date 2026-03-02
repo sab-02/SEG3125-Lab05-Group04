@@ -21,14 +21,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const bookingSummary = document.getElementById("bookingSummary");
   const confirmationMessage = document.getElementById("confirmationMessage");
 
+  // Stylist Diffrent Availability 
+  const stylistAvailability = {
+    "John Clark – Senior Stylist": [1, 2, 3, 4, 5],
+    "Sophia Lee – Color Specialist": [2, 3, 4, 5],
+    "Emma Rodriguez – Creative Stylist": [1, 3, 5],
+    "Michael Brown – Beard Specialist": [3, 4, 5, 6],
+    "Olivia Chen – Hair Treatment Expert": [1, 2, 3, 4],
+    "Daniel Smith – Junior Stylist": [1, 2, 3]
+  };
+
+  function getDisabledDays() {
+    const stylist = stylistSelect.value;
+
+    if (!stylist || !stylistAvailability[stylist]) {
+      return [
+        function(date) {
+          return (date.getDay() === 0 || date.getDay() === 6);
+        }
+      ];
+    }
+
+    const allowedDays = stylistAvailability[stylist];
+
+    return [
+      function(date) {
+        return !allowedDays.includes(date.getDay());
+      }
+    ];
+  }
 
   const fp = flatpickr(dateInput, {
     minDate: "today",
-    disable: [
-      function(date) {
-        return (date.getDay() === 0 || date.getDay() === 6);
-      }
-    ],
+    disable: getDisabledDays(),
     onChange: function(selectedDates, dateStr) {
       updateSummary();
       checkFormValidity();
@@ -268,7 +293,12 @@ document.addEventListener("DOMContentLoaded", function () {
   cardNumber.addEventListener("input", checkFormValidity);
   cardExpiry.addEventListener("input", checkFormValidity);
   cardCVV.addEventListener("input", checkFormValidity);
-  stylistSelect.addEventListener("change", updateSummary);
+  stylistSelect.addEventListener("change", function () {
+    fp.set("disable", getDisabledDays());
+    fp.clear(); // clears invalid date
+    updateSummary();
+    checkFormValidity();
+  });
 
 });
 
